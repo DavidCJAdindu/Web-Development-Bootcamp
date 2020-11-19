@@ -1,7 +1,23 @@
-body {
-  background-color: orange;
-
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-div {}
+p {
+  margin-top: 20px;
+}
+
+body{
+  background-color: purple;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+.bottom-cloud {
+  position: absolute;
+}
+
+.top-cloud {
+  margin: 50px 0 10px 400px ;
+}
 
