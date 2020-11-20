@@ -19,6 +19,14 @@ body {
   line-height: 4rem;
 }
 
+h3 {
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+
+p {
+  color: #8f8f8f;
+}
+
 .row {
   padding-top: 4.5rem; 
 }
@@ -49,9 +57,25 @@ body {
 .title-image {
   width: 60%;
   transform: rotate(25deg);
-
 }
 
+#features {
+  padding: 7% 15%;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.icon {
+  margin-bottom: 1rem;
+  color: #ef8172;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
 
 
 
