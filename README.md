@@ -2,7 +2,7 @@ Web-Development-Bootcamp
 
 Everything I have learned taking The Complete 2020 Web Development Bootcamp by Dr. Angela Yu - https://www.udemy.com/course/the-complete-web-development-bootcamp/
 Projects Include:
- - Basic Portfolio built using html and css
- - Basic Website built using html and css
- - Tindog Website made using Bootstarp
+ - Basic Portfolio built using HTML&CSS
+ - Basic Website built using HTML&CSS
+ - Tindog Website made using Bootstrap CSS
  
