@@ -6,6 +6,7 @@ Projects Include:
  - Basic Portfolio built using HTML&CSS
  - Basic Website built using HTML&CSS
  - Tindog Website made using Bootstrap CSS
+ - Item Lister Project 
  
 
 
