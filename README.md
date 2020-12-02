@@ -7,6 +7,7 @@ Projects Include:
  - Basic Website built using HTML&CSS
  - Tindog Website made using Bootstrap CSS
  - Item Lister Project 
+ - The Dice Game 
  
 
 
