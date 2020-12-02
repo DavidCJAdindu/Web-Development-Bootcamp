@@ -5,9 +5,10 @@ Everything I have learned taking The Complete 2020 Web Development Bootcamp by D
 Projects Include:
  - Basic Portfolio built using HTML&CSS
  - Basic Website built using HTML&CSS
- - Tindog Website made using Bootstrap CSS
- - Item Lister Project 
- - The Dice Game 
+ - Tindog Website built using Bootstrap CSS
+ - Item Lister Project built using with HTML,CSS & JS
+ - Dice Project built using HTML,CSS & JS
+ - Drum Kit built using HTML,CSS & JS
  
 
 
