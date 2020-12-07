@@ -9,6 +9,8 @@ Projects Include:
  - Item Lister Project built using with HTML,CSS & JS
  - Dice Project built using HTML,CSS & JS
  - Drum Kit built using HTML,CSS & JS
+ - Simon Game built using HTML,CSS,JS & JQUERY
+ - Calculator built with NodeJS & Express
  
 
 
