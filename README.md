@@ -11,6 +11,8 @@ Projects Include:
  - Drum Kit built using HTML,CSS & JS
  - Simon Game built using HTML,CSS,JS & JQUERY
  - Calculator built with NodeJS & Express
+ - Weather Application built using exrpress and the Open Weather Map API
+ - Newsletter Signup App built using express and the mailchimp API & deployed on heroku: https://obscure-eyrie-68976.herokuapp.com
 
  
 

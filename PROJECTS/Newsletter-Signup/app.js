@@ -39,7 +39,7 @@ app.post("/", function(req, res){
 
   const options = {
     method: "POST",
-    auth: "lavish:6221e2847ec0b26a0f4cb3e93e9a938a-us7"
+    auth: "lavish:88d6429ec332889dca99d44098724c0b-us7"
   }
 
   const request = https.request(url, options, function(response){
@@ -69,8 +69,8 @@ app.post("/failure", function(req, res) {
   res.redirect("/");
 });
 
-
-app.listen(3000, function(){
+// HEROKU PORT or 3000
+app.listen(process.env.PORT || 3000, function(){
   console.log("Server Running")
 });
 
