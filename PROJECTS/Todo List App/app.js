@@ -2,6 +2,7 @@
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
+const date = require(__dirname + "/date.js");
 
 const app = express();
 
@@ -15,14 +16,7 @@ const workItems = [];
 
 app.get("/", function(req, res){
 
-  const today = new Date();
-  const options = {
-    weekday: "long",
-    day: "numeric",
-    month: "long"
-  };
-
-  const day = today.toLocaleDateString("en-US", options)
+  const day = date.getDate();
 
   res.render("list", {listTitle: day, newItems: items});
 
