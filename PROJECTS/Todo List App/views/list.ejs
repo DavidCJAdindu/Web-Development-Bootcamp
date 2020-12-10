@@ -1,46 +1,28 @@
-<!doctype html>
+<%- include("header") -%>
 
-<html lang="en">
+    <div class="box" id="heading">
+      <h1> <%= listTitle %>! </h1>
+    </div>
 
-  <head>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- CSS -->
-    <link href="css/styles.css" rel="stylesheet"> 
-
-    <!-- Website Tiatle -->
-    <title>Todo List App</title>
-
-  </head>
-
-  <body>
-
-    <h1>Today is: <%= day %>! </h1>
-
-    <ul>
-      <li>Buy Food</li>
-      <li>Cook Food</li>
-      <li>Eat Food</li>
-
+    <div class="box">
 
       <% for (var i=0; i<newItems.length; i++){ %>
-        <li> <%= newItems[i] %> </li>
+
+        <div class="item">
+          <input type="checkbox">
+          <p> <%= newItems[i] %> </p>
+        </div>
+
       <% } %>
 
-    </ul>
+      <form action="/" method="POST" class="item">
+        <input type="text" name="newItem" id="" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="list" value= <%= listTitle %> > 
+          +
+        </button>
+      </form>
 
-  <form action="/" method="POST" class="">
-    <input type="text" name="newItem" id="">
-    <button type="submit">Add</button>
-  </form>
+    </div>
 
-  
-    <!-- JavaScript -->
-    <script src="app.js"> </script> 
+<%- include("footer") -%>
 
-  </body>
-
-</html>

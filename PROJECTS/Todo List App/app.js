@@ -7,10 +7,11 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-const addItems = [];
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+
+const items = ["Eat", "Sleep", "Code"];
+const workItems = [];
 
 app.get("/", function(req, res){
 
@@ -23,22 +24,36 @@ app.get("/", function(req, res){
 
   const day = today.toLocaleDateString("en-US", options)
 
-  res.render("list", {day: day, newItems: addItems});
+  res.render("list", {listTitle: day, newItems: items});
 
 });
 
 app.post("/", function(req, res){
+  
+  const item = req.body.newItem;
 
-  const addItem = req.body.newItem;
-
-  addItems.push(addItem);
-
-
-
-  res.redirect("/");
-
+  if (req.body.list === "Work") {
+    workItems.push(item);
+    res.redirect("/work");
+  } 
+  else {
+    items.push(item);
+    res.redirect("/");
+  }
 
 });
+
+app.get("/work" , function(req, res){
+  res.render("list", {listTitle: "Work List", newItems: workItems});
+});
+
+
+
+
+
+
+
+
 
 
 
