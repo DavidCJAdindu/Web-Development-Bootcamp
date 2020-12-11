@@ -5,4 +5,28 @@
 
   <p> <%= home %> </p>
 
+  <% posts.forEach(function(post){ %>
+
+    <div>
+
+      <h1> <%= post.title %> </h1>
+      <p> 
+        <%= post.body.substring(0, 100) + "..." %>
+         <a href="posts/<%= post.title %>">Read More</a>
+      </p>
+
+    </div>
+
+  <% }); %>
+
+
+
+
 <%- include("partials/footer") -%>
+
+
+<!-- 
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo natus cum porro, magni voluptates doloribus fuga reiciendis harum veniam odio fugit itaque quas inventore molestias cupiditate ad ipsa. Nisi repudiandae modi, nemo ut autem corporis maiores quasi aspernatur quia, rerum inventore quod. Consectetur cumque numquam ducimus minima itaque necessitatibus? Ducimus, pariatur. Aspernatur assumenda unde accusantium, dolor voluptas nulla eveniet perspiciatis, eaque fugiat vel, cupiditate quaerat ullam laborum possimus blanditiis recusandae maxime rerum vitae eos? Fugiat eum, incidunt maiores aut ad praesentium sit unde rerum mollitia culpa laudantium amet tenetur eligendi explicabo quod error alias, obcaecati quo. Corrupti quo adipisci a. 
+-->
+
+
