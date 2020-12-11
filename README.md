@@ -14,6 +14,7 @@ Projects Include:
  - Weather Application built using exrpress and the Open Weather Map API.
  - Newsletter Signup App built using express and the mailchimp API & deployed on heroku: https://obscure-eyrie-68976.herokuapp.com
  - To-do List App built using ejs and express.
+ - Blog Poject built using ejs and express. 
 
  
 
