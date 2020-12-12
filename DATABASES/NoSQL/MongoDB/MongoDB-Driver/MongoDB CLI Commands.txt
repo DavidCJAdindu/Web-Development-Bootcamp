@@ -1,0 +1,204 @@
+MongoDB Cheat Sheet
+
+> show all databases: 
+'show dbs'
+
+
+> show current database: 
+'db'
+
+
+> create or switch database: 
+'use acme'
+
+
+> drop/delete database: 
+'db.dropDatabase()'
+
+
+> create collection:
+'db.createCollection('NAME COLLECTION')'
+
+
+> show collections: 
+'show collections'
+
+
+> insert row: 
+db.COLLECTION NAME.insert({
+  title: 'Post One',
+  body: 'Body of post one',
+  category: 'News',
+  tags: ['news', 'events'],
+  user: {
+    name: 'John Doe',
+    status: 'author'
+  },
+  date: Date()
+})
+
+
+> insert multiple rows: 
+db.posts.insertMany([
+  {
+    title: 'Post Two',
+    body: 'Body of post two',
+    category: 'Technology',
+    date: Date()
+  },
+  {
+    title: 'Post Three',
+    body: 'Body of post three',
+    category: 'News',
+    date: Date()
+  },
+  {
+    title: 'Post Four',
+    body: 'Body of post three',
+    category: 'Entertainment',
+    date: Date()
+  }
+])
+
+
+> get all rows:
+'db.posts.find()'
+
+
+> get all rows formatted:
+'db.find().pretty()'
+
+
+> find rows: 
+'db.posts.find({ category: 'News' })'
+
+
+> sort rows: 
+- ascending order
+'db.posts.find().sort({ title: 1 }).pretty()'
+- descending order
+'db.posts.find().sort({ title: -1 }).pretty()'
+
+
+> count rows:
+'db.posts.find().count()'
+'db.posts.find({ category: 'news' }).count()'
+
+
+> limit rows:
+'db.posts.find().limit(2).pretty()'
+
+
+> chaining:
+'db.posts.find().limit(2).sort({ title: 1 }).pretty()'
+
+
+> foreach:
+db.posts.find().forEach(function(doc) {
+  print("Blog Post: " + doc.'KEY NAME')
+})
+
+
+> find one row:
+'db.posts.findOne({ category: 'News' })'
+
+
+> find specific fields
+db.posts.find({ title: 'Post One' }, {
+  title: 1,
+  author: 1
+})
+
+
+> update row:
+db.posts.update({ title: 'Post Two' },
+{ "UPDATED DATA"
+  title: 'Post Two',
+  body: 'New body for post 2',
+  date: Date()
+},
+{
+  upsert: true // create new data if 'title:post two' isnt found
+})
+
+
+> update specific field:
+db.posts.update({ title: 'Post Two' },
+{ "UPDATED DATA"
+  $set: {
+    body: 'Body of post 2',
+    category: 'Technology'
+  }
+})
+
+
+> increment field ($inc):
+db.posts.update({ title: 'Post Two' },
+{
+  $inc: {
+    likes: 5
+  }
+})
+
+
+> rename field: 
+db.posts.update({ title: 'Post Two' },
+{
+  $rename: {
+    likes: 'views'
+  }
+})
+
+
+> delete row: 
+'db.posts.remove({ title: 'Post Four' })'
+
+
+> sub-documents: 
+db.posts.update({ title: 'Post One' },
+{
+  $set: {
+    comments: [
+      {
+        body: 'Comment One',
+        user: 'Mary Williams',
+        date: Date()
+      },
+      {
+        body: 'Comment Two',
+        user: 'Harry White',
+        date: Date()
+      }
+    ]
+  }
+})
+
+
+> find by element in array ($elemMatch): 
+db.posts.find({
+  comments: {
+     $elemMatch: {
+       user: 'Mary Williams'
+       }
+    }
+  }
+)
+
+
+> add index: 
+'db.posts.createIndex({ title: 'text' })'
+
+
+> text search: 
+db.posts.find({
+  $text: {
+    $search: "\"Post O\""
+    }
+})
+
+
+> greater & less than: 
+db.posts.find({ views: { $gt: 2 } })
+db.posts.find({ views: { $gte: 7 } })
+db.posts.find({ views: { $lt: 7 } })
+db.posts.find({ views: { $lte: 7 } })
